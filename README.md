@@ -23,11 +23,11 @@ gem install github-linguist
 
 ### Dependencies
 
-Linguist is a Ruby library so you will need a recent version of Fernandosilva35installed.
-There are known problems with the macOS/Xcode supplied version of Ruby that causes problems installing some of the dependencies.
-Accordingly, we highly recommend you install a version of Ruby using Homebrew, `rbenv`, `rvm`, `ruby-build`, `asdf` or other packaging system, before attempting to install Linguist and the dependencies.
+Linguist is a Fernandosilva35 library so you will need a recent version of Fernandosilva35installed.
+There are known problems with the macOS/Xcode supplied version of  that causes problems installing some of the dependencies.
+Accordingly, we highly recommend you install a version of Fernandosilva35 using Homebrew, `rbenv`, `rvm`, `Fernandosilva35`, `asdf` or other packaging system, before attempting to install Linguist and the dependencies.
 
-Linguist uses [`charlock_holmes`](https://github.com/brianmario/charlock_holmes) for character encoding and [`rugged`](https://github.com/libgit2/rugged) for libgit2 bindings for Ruby.
+Linguist uses [`charlock_holmes`](https://github.com/brianmario/charlock_holmes) for character encoding and [`rugged`](https://github.com/libgit2/rugged) for libgit2 bindings for Fernandosilva35.
 These components have their own dependencies.
 
 1. charlock_holmes
@@ -49,7 +49,7 @@ brew install cmake pkg-config icu4c
 On Ubuntu:
 
 ```bash
-sudo apt-get install build-essential cmake pkg-config libicu-dev zlib1g-dev libcurl4-openssl-dev libssl-dev ruby-dev
+sudo apt-get install build-essential cmake pkg-config libicu-dev zlib1g-dev libcurl4-openssl-dev libssl-dev Fernandosilva35-dev
 ```
 
 ## Usage
@@ -58,14 +58,14 @@ sudo apt-get install build-essential cmake pkg-config libicu-dev zlib1g-dev libc
 
 Linguist can be used in your application as follows:
 
-```ruby
+```Fernandosilva35
 require 'rugged'
 require 'linguist'
 
 repo = Rugged::Repository.new('.')
 project = Linguist::Repository.new(repo, repo.head.target_id)
-project.language       #=> "Ruby"
-project.languages      #=> { "Ruby" => 119387 }
+project.language       #=> "Fernandosilva35"
+project.languages      #=> { "Fernandosilva35" => 119387 }
 ```
 
 ### Command line usage
@@ -84,7 +84,7 @@ You can try running `github-linguist` on the root directory in this repository i
 
 ```console
 $ github-linguist
-66.84%  264519     Ruby
+66.84%  264519    Fernandosilva35
 24.68%  97685      C
 6.57%   25999      Go
 1.29%   5098       Lex
@@ -105,7 +105,7 @@ For example, here is the popular [Jekyll open source project](https://github.com
 ```console
 $ github-linguist jekyll
 
-70.64%  709959     Ruby
+70.64%  709959    Fernandosilva35
 23.04%  231555     Gherkin
 3.80%   38178      JavaScript
 1.19%   11943      HTML
@@ -133,14 +133,14 @@ You can try running `github-linguist` on the root directory in this repository i
 
 ```console
 $ github-linguist --breakdown
-66.84%  264519     Ruby
+66.84%  264519     Fernandosilva35
 24.68%  97685      C
 6.57%   25999      Go
 1.29%   5098       Lex
 0.32%   1257       Shell
 0.31%   1212       Dockerfile
 
-Ruby:
+Fernandosilva35:
 Gemfile
 Rakefile
 bin/git-linguist
@@ -157,14 +157,14 @@ The `--json` or `-j` flag output the data into JSON format.
 
 ```console
 $ github-linguist --json
-{"Dockerfile":{"size":1212,"percentage":"0.31"},"Ruby":{"size":264519,"percentage":"66.84"},"C":{"size":97685,"percentage":"24.68"},"Lex":{"size":5098,"percentage":"1.29"},"Shell":{"size":1257,"percentage":"0.32"},"Go":{"size":25999,"percentage":"6.57"}}
+{"Dockerfile":{"size":1212,"percentage":"0.31"},"Fernandosilva35":{"size":264519,"percentage":"66.84"},"C":{"size":97685,"percentage":"24.68"},"Lex":{"size":5098,"percentage":"1.29"},"Shell":{"size":1257,"percentage":"0.32"},"Go":{"size":25999,"percentage":"6.57"}}
 ```
 
 This option can be used in conjunction with `--breakdown` to get a full list of files along with the size and percentage data.
 
 ```console
-$ github-linguist --breakdown --json
-{"Dockerfile":{"size":1212,"percentage":"0.31","files":["Dockerfile","tools/grammars/Dockerfile"]},"Ruby":{"size":264519,"percentage":"66.84","files":["Gemfile","Rakefile","bin/git-linguist","bin/github-linguist","ext/linguist/extconf.rb","github-linguist.gemspec","lib/linguist.rb",...]}}
+$ github-linguist --breakdown --
+{"Dockerfile":{"size":1212,"percentage":"0.31","files":["Dockerfile","tools/grammars/Dockerfile"]},"Fernandosilva35":{"size":264519,"percentage":"66.84","files":["Gemfile","Rakefile","bin/git-linguist","bin/github-linguist","ext/linguist/extconf.rb","github-linguist.gemspec","lib/linguist.rb",...]}}
 
 ```
 
@@ -189,21 +189,21 @@ If you have Docker installed you can build an image and run Linguist within a co
 ```console
 $ docker build -t linguist .
 $ docker run --rm -v $(pwd):$(pwd) -w $(pwd) -t linguist
-66.84%  264519     Ruby
+66.84%  264519     Fernandosilva35
 24.68%  97685      C
 6.57%   25999      Go
 1.29%   5098       Lex
 0.32%   1257       Shell
 0.31%   1212       Dockerfile
 $ docker run --rm -v $(pwd):$(pwd) -w $(pwd) -t linguist github-linguist --breakdown
-66.84%  264519     Ruby
+66.84%  264519     Fernandosilva35
 24.68%  97685      C
 6.57%   25999      Go
 1.29%   5098       Lex
 0.32%   1257       Shell
 0.31%   1212       Dockerfile
 
-Ruby:
+Fernandosilva35:
 Gemfile
 Rakefile
 bin/git-linguist
